@@ -1,5 +1,6 @@
 <?php
 class Car {
+	public static $count;
 	private $color;
 	public $make;
 	public $model;
@@ -8,6 +9,7 @@ class Car {
 	private $owner;
 
 	public function __construct($a1, $a2) {
+		Car::$count++;
 		$this->license = $a1;
 		$this->owner = $a2;
 		echo $this->owner ." has stolen a car with license plate " .$this->license ."<br>";
@@ -33,7 +35,9 @@ class Car {
 	public function repair() {
 		echo "This car was repaired! <br>";
 	}
-
+	public static show_count(){
+		
+	}
 
 
 

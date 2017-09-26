@@ -1,7 +1,13 @@
 <?php
-include "Car.php";
-include "Dog.php";
-include "House.php";
+include "database.php";
+$db = new Database ();
+$products = $db->select_array("SELECT * FROM products");
+
+foreach ($products as $product) {
+	echo $product["name"] . "<br>";
+}
+//include "Dog.php";
+//include "House.php";
 /*
 $arturo_automobilis = new Car("RAP 001", "Arturas");
 
@@ -29,6 +35,7 @@ echo $arturo_automobilis->owner;
 //foreach ($owners as $owner) {
 	
 //}
+/*
 $dog1 = new Dog("Artur", "Rikis");
 
 $dog1->owner = "Petras";
@@ -49,4 +56,12 @@ $house1->clean("asadasd");
 $house1->watch("asadasd");
 $house1->listen("asadasd");
 $house1->repair("asadasd");
+*/
+//$pirmas = new Car("MARYT3", "Maryte");
+//$antras = new Car("MARYT3", "Maryte");
+//$trecias = new Car("MARYT3", "Maryte");
+//$ketvirtas = new Car("MARYT3", "Maryte");
+//$penktas = new Car("MARYT3", "Maryte");
+//echo Car::$count;
+//Car::show_count();
 ?>
