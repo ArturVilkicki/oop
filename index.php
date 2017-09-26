@@ -24,14 +24,29 @@ $arturo_automobilis->repair();
 
 echo $arturo_automobilis->owner;
 */
+//$owners = ['Ignas', 'Arturas','Petras', 'Adomas'];
 
+//foreach ($owners as $owner) {
+	
+//}
 $dog1 = new Dog("Artur", "Rikis");
 
-
+$dog1->owner = "Petras";
+$dog1->name = "REX";
 $dog1->walk("aslsal");
 $dog1->eat("sadas");
 $dog1->sleap("asadasd");
 $dog1->destroy("asadasd");
 $dog1->shit("asadasd");
 $dog1->bark("asadasd");
+
+echo "<br>";
+$house1 = new House("Petras", "Bios");
+
+$house1->eat("aslsal");
+$house1->build("sadas");
+$house1->clean("asadasd");
+$house1->watch("asadasd");
+$house1->listen("asadasd");
+$house1->repair("asadasd");
 ?>

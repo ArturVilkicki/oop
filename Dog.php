@@ -13,7 +13,14 @@ class Dog {
 
 		echo $this->owner . " just got a dog named " . $this->name . "<br>";
 	}
-
+	public function __set($parameter, $value) {
+		echo "Someone changed $parameter of my dog to $value<br>";
+		$this->$parameter = $value;
+	}
+	public function __get($parameter) {
+		echo "Someone is checking the $parameter of this dog<br>";
+		return $this->$parameter;
+	}
 
 	public function walk($where) {
 		echo "The dog is walking on $where <br>";
